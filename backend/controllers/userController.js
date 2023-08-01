@@ -23,13 +23,13 @@ const registerUser = asyncHandler(
                 name , email, password , pic
             });
             if(user){
-                return res.status(200).json({token : generateToken() , user})
+                return res.status(200).json({token : generateToken(user._id) , user})
             }
         } catch (error) {
             return res.status(400).json({message : 'Internal server error'})
         }
     }
-)
+    )
 
 const generateToken = (id) => {
     return jwt.sign({id} ,process.env.JWT_SECRET,{

@@ -15,7 +15,7 @@ const ChatProvider = ({children}) => {
         if(!userInfo) {
             navigate('/');
         }
-    },[])
+    },[navigate])
     
     return (
         <ChatContext.Provider value={{user , setUser , chats , setChats , selectedChat , setSelectedChat}}>
