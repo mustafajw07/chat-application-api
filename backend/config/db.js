@@ -5,7 +5,7 @@ dotenv.config()
 
 const connectDB = async () => {
     try {
-         const conn = await mongoose.connect(process.env.MONGO_URL, {
+         const conn = await mongoose.connect(process.env.CONNECT, {
             useNewUrlParser:true,
             useUnifiedTopology: true,
          });
@@ -16,4 +16,4 @@ const connectDB = async () => {
     }
 }
 
-module.exports = connectDB;
+module.exports = connectDB; 

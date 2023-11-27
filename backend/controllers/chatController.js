@@ -1,8 +1,5 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../models/UserMode');
-const jwt = require('jsonwebtoken');
-const dotenv = require('dotenv');
-const bcrypt = require('bcryptjs');
 const Chat = require('../models/chatModel');
 
 

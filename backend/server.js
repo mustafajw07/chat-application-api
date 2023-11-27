@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes')
 const chatRoutes = require('./routes/chatRoutes')
+const messageRoutes = require('./routes/messageRoutes')
 
 
 const app = express()
@@ -22,8 +23,9 @@ app.get('/', (req,res) => {
 
 app.use('/api/user' , userRoutes)
 app.use('/api/chat' , chatRoutes)
+app.use('/api/message' , messageRoutes)
 
 
-const PORT = process.env.PORT || 8000
+const PORT = 5000
 
 app.listen(PORT,() => {console.log('Backend server started on PORT 5000');})
